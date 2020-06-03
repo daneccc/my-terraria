@@ -10,6 +10,10 @@ namespace myTerraria
     class Program
     {
         static RenderWindow win;
+
+        public static RenderWindow Window { get { return Window; } }
+        public static Game Game { private set; get; }
+
         static void Main(string[] args)
         {
             //create the window object
@@ -23,16 +27,20 @@ namespace myTerraria
             //loading content
             Content.Load();
 
+            Game = new Game(); 
+
             //a loop that will work as long as the window is open
             while (win.IsOpen)
             {
                 //inside the loop we ask one team that revises all its incoming message box about events such as moving higher, closing when keystrokes and so on
                 win.DispatchEvents(); //call the event handlers for each pading events
 
+                Game.Update();
+                
                 //next, we clear the drawing area of the window
                 win.Clear(Color.Black);
 
-                /*draw here!*/
+                Game.Draw();
 
                 win.Display();
 
