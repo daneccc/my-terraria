@@ -20,6 +20,9 @@ namespace myTerraria
             //you need to bind a method to the window event handler that will be called when you click the close window button on the upper right of the window
             win.Closed += Win_Closed;
 
+            //loading content
+            Content.Load();
+
             //a loop that will work as long as the window is open
             while (win.IsOpen)
             {
