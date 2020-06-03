@@ -11,7 +11,7 @@ namespace myTerraria
     {
         static RenderWindow win;
 
-        public static RenderWindow Window { get { return Window; } }
+        public static RenderWindow Window { get { return win; } }
         public static Game Game { private set; get; }
 
         static void Main(string[] args)

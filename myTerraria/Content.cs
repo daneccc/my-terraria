@@ -9,7 +9,7 @@ namespace myTerraria
 {
     class Content
     {
-        public const string CONTENT_DIR = "..\\Content\\";
+        public const string CONTENT_DIR = "..\\Content\\"; //\myTerraria\bin\Content\Textures
 
         //will store the texture of earthen tiles
         public static Texture texTile0;
@@ -17,7 +17,7 @@ namespace myTerraria
         //static method for loading compurer memory resources
         public static void Load()
         {
-            texTile0 = new Texture(CONTENT_DIR + "Tiles_0.png");
+            texTile0 = new Texture(CONTENT_DIR + "Textures\\Tiles_0.png");
         }
 
 

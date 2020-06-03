@@ -12,7 +12,7 @@ namespace myTerraria
 
         public Game()
         {
-            world = new World;
+            world = new World();
         }
 
         public void Update()
@@ -22,7 +22,7 @@ namespace myTerraria
 
         public void Draw()
         {
-
+            Program.Window.Draw(world);
         }
     }
 
