@@ -1,4 +1,5 @@
 ﻿using SFML.Graphics;
+using SFML.Window;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,6 +24,7 @@ namespace myTerraria
 
             //you need to bind a method to the window event handler that will be called when you click the close window button on the upper right of the window
             win.Closed += Win_Closed;
+            win.Resized += Win_Resized;
 
             //loading content
             Content.Load();
@@ -45,6 +47,11 @@ namespace myTerraria
                 win.Display();
 
             }
+        }
+
+        private static void Win_Resized(object sender, SizeEventArgs e)
+        {
+            win.SetView(new View(new FloatRect(0, 0, e.Width, e.Height)));
         }
 
         private static void Win_Closed(object sender, EventArgs e)
